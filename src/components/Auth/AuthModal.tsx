@@ -1,0 +1,27 @@
+import { Modal, Tabs, TabsList, TabsPanel, TabsTab } from '@mantine/core'
+import React from 'react'
+import StudentRegisterTab from './Register/StudentRegisterTab'
+
+interface AuthModalTypes {
+    opened: boolean,
+    close: () => void,
+    open: () => void
+}
+
+export default function AuthModal({ opened, close, open }: AuthModalTypes) {
+    return (
+        <Modal opened={opened} onClose={close} title="რეგისტრაცია" size="lg">
+            <Tabs defaultValue="student">
+                <TabsList>
+                    <TabsTab value="student">მოსწავლე</TabsTab>
+                    <TabsTab value="parent">მშობელი</TabsTab>
+                    <TabsTab value="school">სკოლა</TabsTab>
+                </TabsList>
+
+                <StudentRegisterTab/>
+                <TabsPanel value="parent">მშობელი</TabsPanel>
+                <TabsPanel value="school">სკოლა</TabsPanel>
+            </Tabs>
+        </Modal>
+    )
+}
