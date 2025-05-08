@@ -1,9 +1,9 @@
-import { Box } from "@mantine/core";
+import { Box, Text } from "@mantine/core";
 
-export default function Home() {
+export default function page() {
   return (
-    <Box >
+    <Text >
       Hello
-    </Box>
+    </Text>
   );
 }

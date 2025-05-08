@@ -1,6 +1,7 @@
 import { Modal, Tabs, TabsList, TabsPanel, TabsTab } from '@mantine/core'
 import React from 'react'
 import StudentRegisterTab from './Register/StudentRegisterTab'
+import ParentRegisterTab from './Register/ParentRegisterTab'
 
 interface AuthModalTypes {
     opened: boolean,
@@ -19,7 +20,7 @@ export default function AuthModal({ opened, close, open }: AuthModalTypes) {
                 </TabsList>
 
                 <StudentRegisterTab/>
-                <TabsPanel value="parent">მშობელი</TabsPanel>
+                <ParentRegisterTab/>
                 <TabsPanel value="school">სკოლა</TabsPanel>
             </Tabs>
         </Modal>
