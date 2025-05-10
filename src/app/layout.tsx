@@ -1,7 +1,6 @@
 import type { Metadata } from "next";
 import { AppShell, AppShellHeader, Button, ColorSchemeScript, MantineProvider, mantineHtmlProps, DEFAULT_THEME, Text, Flex, AppShellMain } from "@mantine/core";
 import '@mantine/core/styles.css';
-import Link from "next/link";
 
 
 export const metadata: Metadata = {
@@ -21,9 +20,11 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider>
-          <AppShell>
-            <AppShellHeader py="xs" px="xs">
-              <Flex align="center" justify="space-between">
+          <AppShell
+            header={{ height: "52px" }}
+          >
+            <AppShellHeader px="xs">
+              <Flex h="100%" align="center" justify="space-between">
                 <Text size="md">AI School</Text>
                 <Button>Get Started</Button>
               </Flex>

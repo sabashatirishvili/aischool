@@ -1,9 +1,13 @@
-import { Box, Text } from "@mantine/core";
+import { Box, Image, Stack, Text } from "@mantine/core";
 
 export default function page() {
   return (
-    <Text >
-      Hello
-    </Text>
+    <Box>
+      <Stack >
+        <Image src="'"/>
+        <Text>Your AI Partner in Every Class</Text>
+      </Stack>
+    </Box>
+
   );
 }
