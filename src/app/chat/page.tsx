@@ -1,20 +1,35 @@
 "use client";
 import ChatInput from '@/components/Chat/ChatInput'
+import ChatSidebar from '@/components/Chat/ChatSidebar';
+import FileButton from '@/components/Chat/FileButton';
 import SendButton from '@/components/Chat/SendButton';
-import { Flex, Grid, GridCol, Image } from '@mantine/core'
+import { Box, Flex, Image, Stack, Text } from '@mantine/core'
 import React from 'react'
 
 export default function page() {
   return (
-    <Grid>
-      <GridCol span={2}>hi</GridCol>
-      <GridCol span={9}>
-        <Image src="/logo_export.svg" color="black" alt="logo"/>
-        <Flex align="center">
-          <ChatInput onSend={() => console.log("send")} />
+    <Flex h="calc(100vh - 60px)">
+      <ChatSidebar />
+      <Stack p="lg" h="100%" flex={1}>
+        <Stack 
+        flex={1} 
+        align="center" 
+        pt="xl" 
+        c="#bdc5cd"
+        style={{
+          textAlign: "center"
+        }}
+        >
+          <Image src="/logo_only.svg" alt="logo_chat" opacity={80} maw="10rem"  />
+          <Text size="xl" >Welcome to AI School</Text>
+          <Text size="md">Please type a message to begin your interaction.</Text>
+        </Stack>
+        <Flex align="center" gap="sm">
+          <FileButton/>
+          <ChatInput />
           <SendButton />
         </Flex>
-      </GridCol>
-    </Grid>
+      </Stack>
+    </Flex>
   )
 }

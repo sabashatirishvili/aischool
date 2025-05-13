@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { AppShell, AppShellHeader, ColorSchemeScript, MantineProvider, mantineHtmlProps, Flex, AppShellMain, Image } from "@mantine/core";
+import { AppShell, AppShellHeader, ColorSchemeScript, MantineProvider, mantineHtmlProps, Flex, AppShellMain, Image, Anchor } from "@mantine/core";
 import '@mantine/core/styles.css';
 import AuthButton from "@/components/Auth/AuthButton";
 
@@ -26,7 +26,9 @@ export default function RootLayout({
           >
             <AppShellHeader px="xs">
               <Flex h="100%" align="center" justify="space-between">
-                <Image src="/logo_export.svg" alt="logo_header" w={128}/>
+                <Anchor href="/">
+                  <Image src="/logo_export.svg" alt="logo_header" w={128}/>
+                </Anchor>
                 <AuthButton/>
               </Flex>
             </AppShellHeader>
