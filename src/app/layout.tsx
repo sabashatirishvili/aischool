@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
-import { AppShell, AppShellHeader, Button, ColorSchemeScript, MantineProvider, mantineHtmlProps, DEFAULT_THEME, Text, Flex, AppShellMain } from "@mantine/core";
+import { AppShell, AppShellHeader, ColorSchemeScript, MantineProvider, mantineHtmlProps, Flex, AppShellMain, Image, Anchor } from "@mantine/core";
 import '@mantine/core/styles.css';
-import Link from "next/link";
+import AuthButton from "@/components/Auth/AuthButton";
 
 
 export const metadata: Metadata = {
@@ -21,11 +21,15 @@ export default function RootLayout({
       </head>
       <body>
         <MantineProvider>
-          <AppShell>
-            <AppShellHeader py="xs" px="xs">
-              <Flex align="center" justify="space-between">
-                <Text size="md">AI School</Text>
-                <Button>Get Started</Button>
+          <AppShell
+            header={{ height: "52px" }}
+          >
+            <AppShellHeader px="xs">
+              <Flex h="100%" align="center" justify="space-between">
+                <Anchor href="/">
+                  <Image src="/logo_export.svg" alt="logo_header" w={128}/>
+                </Anchor>
+                <AuthButton/>
               </Flex>
             </AppShellHeader>
             <AppShellMain>
