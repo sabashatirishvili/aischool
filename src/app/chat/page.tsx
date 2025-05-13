@@ -3,6 +3,7 @@ import ChatInput from '@/components/Chat/ChatInput'
 import ChatSidebar from '@/components/Chat/ChatSidebar';
 import FileButton from '@/components/Chat/FileButton';
 import SendButton from '@/components/Chat/SendButton';
+import SubjectDropdown from '@/components/Chat/SubjectDropdown';
 import { Box, Flex, Image, Stack, Text } from '@mantine/core'
 import React from 'react'
 
@@ -11,6 +12,9 @@ export default function page() {
     <Flex h="calc(100vh - 60px)">
       <ChatSidebar />
       <Stack p="lg" h="100%" flex={1}>
+        <Flex justify="flex-end" align="center">
+          <SubjectDropdown/>
+        </Flex>
         <Stack 
         flex={1} 
         align="center" 

@@ -14,6 +14,7 @@ export default function ChatInput() {
     minRows={1}
      maxRows={5}
     flex={1}
+    bg="gray.0"
     />
   );
 }
