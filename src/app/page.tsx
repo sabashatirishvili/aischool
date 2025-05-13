@@ -1,4 +1,4 @@
-import { Button, Flex, Image, Stack, Text } from "@mantine/core";
+import { Anchor, Button, Flex, Image, Stack, Text } from "@mantine/core";
 import { FiArrowUpRight } from "react-icons/fi";
 import { FaBrain, FaChartBar, FaTools } from "react-icons/fa";
 import AuthButton from "@/components/Auth/AuthButton";
@@ -12,7 +12,9 @@ export default function page() {
         <Text pb="lg">Your AI Partner in Every Class</Text>
         <Flex gap="xs">
           <AuthButton />
-          <Button rightSection={<FiArrowUpRight />}>Try Demo</Button>
+          <Anchor href="/chat">
+            <Button rightSection={<FiArrowUpRight />}>Try Demo</Button>
+          </Anchor>
         </Flex>
         <Stack align="center" justify="center" mt="md" style={{ color: "GrayText" }} >
           <Stack gap="sm">
