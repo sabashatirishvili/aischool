@@ -1,4 +1,4 @@
-import { Button, Flex, Input, InputLabel, InputWrapper, Select, Stack, TabsPanel, Text } from '@mantine/core'
+import { Button,  Input, InputWrapper, Select, Stack, TabsPanel, } from '@mantine/core'
 import React from 'react'
 
 export default function ParentRegisterTab() {

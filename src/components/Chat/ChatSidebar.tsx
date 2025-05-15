@@ -1,4 +1,4 @@
-import { Box, Flex, Stack } from '@mantine/core'
+import { Flex, Stack } from '@mantine/core'
 import React from 'react'
 import Chat from './Chat'
 import AddButton from './AddButton'

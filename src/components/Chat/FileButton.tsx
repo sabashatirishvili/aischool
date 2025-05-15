@@ -5,7 +5,7 @@ import React, { useState } from 'react';
 
 export default function FileUploadButton() {
   const [file, setFile] = useState<File | null>(null);
-
+  console.log(file?.type);
   return (
     <FileButton onChange={setFile} accept="*">
       {(props) => (
