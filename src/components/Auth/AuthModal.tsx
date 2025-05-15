@@ -9,7 +9,7 @@ interface AuthModalTypes {
     open: () => void
 }
 
-export default function AuthModal({ opened, close, open }: AuthModalTypes) {
+export default function AuthModal({ opened, close }: AuthModalTypes) {
     return (
         <Modal opened={opened} onClose={close} title="რეგისტრაცია" size="lg">
             <Tabs defaultValue="student">
